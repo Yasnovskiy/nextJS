@@ -3,8 +3,7 @@ import { useRouter } from 'next/router';
 
 function Header() {
   const router = useRouter();
-  const { locales = [], locale: activeLocale } = router;
-  const otherLocales = locales.filter((locale) => locale !== activeLocale);
+  const { locales = [] } = router;
 
   return (
     <header className="header">
