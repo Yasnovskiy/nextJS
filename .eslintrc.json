@@ -10,6 +10,14 @@
     "@typescript-eslint",
     "react"
   ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaFeatures": {
+      "tsx": true
+  },
+  "ecmaVersion": "latest",
+  "sourceType": "module" // Specify it only for TypeScript files
+  },
   "parser": "@typescript-eslint/parser",
   "extends": [
     "plugin:react/recommended",
@@ -28,16 +36,7 @@
         }
       }
     },
-  "parserOptions": {
-    "project": "./tsconfig.json",
-      "ecmaFeatures": {
-          "tsx": true
-      },
-      "ecmaVersion": "latest",
-      "sourceType": "module"
-  },
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
     "linebreak-style": [
       "error",
       "unix"
@@ -57,6 +56,8 @@
         "everything-else"
       ]
     }],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 1 }],
     "react/require-default-props": 0,
     "object-property-newline": "error",
     "import/prefer-default-export": 0,
