@@ -2,9 +2,10 @@ import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {}
 
-function Button({ ...props }: ButtonProps) {
+function Button({ type, ...props }: ButtonProps) {
   return (
-    <button type="button" {...props}>Button</button>
+    // eslint-disable-next-line react/button-has-type
+    <button type={type} {...props}>Button</button>
   );
 }
 

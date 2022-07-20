@@ -6,8 +6,6 @@ function Header() {
   const { locales = [], locale: activeLocale } = router;
   const otherLocales = locales.filter((locale) => locale !== activeLocale);
 
-  console.log(otherLocales);
-
   return (
     <header className="header">
       <div>Logo</div>
