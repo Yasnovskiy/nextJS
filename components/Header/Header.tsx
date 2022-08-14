@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -5,10 +6,12 @@ function Header() {
   const router = useRouter();
   const { locales = [] } = router;
 
+  const { t } = useTranslation('common', { useSuspense: false });
+
   return (
     <header className="header">
       <div>Logo</div>
-      <div>Menu</div>
+      <div>{t('h1')}</div>
       <div>
         <ul>
           {locales.map((locale) => {
