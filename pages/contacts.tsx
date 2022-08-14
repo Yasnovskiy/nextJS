@@ -20,6 +20,10 @@ interface ContactsProps {
 export default function Contacts({ data }: ContactsProps) {
   const router = useRouter();
   const { locale, defaultLocale } = router;
+  const dfdsf = process.env.NEXT_PUBLIC_VERCEL_ENV;
+
+  console.log(dfdsf);
+
   const contacts = data.slice(0, 10);
 
   const { t } = useTranslation('common');
