@@ -12,6 +12,8 @@ export default function IndexPage() {
 
   const { t } = useTranslation('index');
 
+  console.log(process.env.TEST_ENV);
+
   return (
     <>
       <Header />
