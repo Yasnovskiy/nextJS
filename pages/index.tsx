@@ -12,7 +12,7 @@ export default function IndexPage() {
 
   const { t } = useTranslation('index');
 
-  console.log('process.env.TEST_ENV ===', process.env);
+  console.log('process.env.SERVER ===', process.env.SERVER);
 
   return (
     <>
