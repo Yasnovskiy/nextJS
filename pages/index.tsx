@@ -11,10 +11,14 @@ export default function IndexPage() {
   const { locale, defaultLocale } = router;
 
   const { t } = useTranslation('index');
-  console.log(process.env.TEST_ENV);
+
+  console.log('process.env.TEST_ENV ===', process.env);
 
   return (
     <>
+
+      {process.env.TEST_ENV === 'ANDREY_AND_MAX' ? <div>используется env</div> : <div>почему не работате?</div>}
+
       <Header />
       <div className="wrapper">
         <h1>{t('h1')}</h1>
