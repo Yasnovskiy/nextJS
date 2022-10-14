@@ -11,6 +11,7 @@ export default function IndexPage() {
   const { locale, defaultLocale } = router;
 
   const { t } = useTranslation('index');
+  console.log(process.env.TEST_ENV);
 
   return (
     <>
