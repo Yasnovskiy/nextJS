@@ -53,10 +53,11 @@ export default function IndexPage() {
         </h2>
 
         <h2>
-          {t('testFolder:testName')}
+          Test rebuild:
+          {' '}
+          {t('testFolder:testBuild')}
         </h2>
         <p>
-          {t('testFolder:testBuild')}
           :
           {' '}
           {locale}
