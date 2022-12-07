@@ -23,6 +23,8 @@ export default function IndexPage() {
 
   console.log('process.env.i18 ===', process.env.I18NEXUS_API_KEY);
 
+  console.log('process.env.TEST_TRUE ===', process.env.TEST_TRUE);
+
   const dfsdfas: any = t('default:bad', { returnObjects: true });
 
   useEffect(() => {
