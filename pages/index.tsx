@@ -18,6 +18,9 @@ export default function IndexPage() {
   const [nameField, setNameField] = useState<any[]>([]);
 
   console.log('process.env.SERVER ===', process.env.SERVER);
+
+  console.log('process.env.SERVER_DEV ===', process.env.SERVER_DEV);
+
   console.log('process.env.i18 ===', process.env.I18NEXUS_API_KEY);
 
   const dfsdfas: any = t('default:bad', { returnObjects: true });
