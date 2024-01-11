@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "i18nexus pull && next dev",
-    "build": "i18nexus pull --api-key $I18NEXUS_API_KEY_TEST && i18nexus pull --api-key $II18NEXUS_API_KEY && next build",
+    "build": "i18nexus pull -k $I18NEXUS_API_KEY_TEST && i18nexus pull -k $II18NEXUS_API_KEY && next build",
     "start": "i18nexus pull && next start",
     "lint": "run-s lint:ts lint:scss",
     "lint:ts": "next lint",
