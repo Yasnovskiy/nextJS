@@ -82,7 +82,7 @@ export default function IndexPage() {
           <a>{t('index:link')}</a>
         </Link>
 
-        <p>{t('test:andrey')}: YES</p>
+        <p>{t('test:andrey')}</p>
         <br />
       </div>
     </>
