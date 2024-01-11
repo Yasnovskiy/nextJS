@@ -81,6 +81,8 @@ export default function IndexPage() {
         <Link href="/contacts">
           <a>{t('index:link')}</a>
         </Link>
+
+        <p>{t('test:andrey')}: YES</p>
         <br />
       </div>
     </>
