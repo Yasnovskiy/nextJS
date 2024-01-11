@@ -25,24 +25,6 @@ export default function IndexPage() {
 
   const dfsdfas: any = t('default:bad', { returnObjects: true });
 
-  useEffect(() => {
-    fetch('https://api.i18nexus.com/project_resources/languages.json?api_key=1_MWX5IYYeyHPiOj26kfSA')
-      .then((response) => response.json())
-      .then((data) => {
-        setLang(data.collection);
-        return console.log(data.collection);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch('https://api.i18nexus.com/project_resources/namespaces.json?api_key=1_MWX5IYYeyHPiOj26kfSA')
-      .then((response) => response.json())
-      .then((data) => {
-        setNameField(data.collection);
-        return console.log(data.collection);
-      });
-  }, []);
-
   console.log(process.env.TEST_ENV);
 
   return (
@@ -89,14 +71,8 @@ export default function IndexPage() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ locale }: any) => {
-  const { data: products } = await axios.get<any>('https://api.i18nexus.com/project_resources/namespaces.json?api_key=1_MWX5IYYeyHPiOj26kfSA');
-
-  const arr = products.collection.map((el: any) => el.title);
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['index', 'test', ...arr])),
-    },
-  };
-};
+export const getStaticProps: GetStaticProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['index', 'test'])),
+  },
+});
