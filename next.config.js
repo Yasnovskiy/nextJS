@@ -5,7 +5,7 @@ module.exports = {
   env: {
     SERVER: process.env.SERVER,
     SERVER_DEV: process.env.SERVER_DEV,
-    I18NEXUS_API_KEY: process.env.I18NEXUS_API_KEY,
+    I18NEXUS_API_KEY_DEV: process.env.I18NEXUS_API_KEY_DEV,
     I18NEXUS_API_KEY_TEST: process.env.I18NEXUS_API_KEY_TEST,
   },
   webpack(webpackConfig) {
