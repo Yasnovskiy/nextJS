@@ -8,4 +8,9 @@ module.exports = {
     I18NEXUS_API_KEY: process.env.I18NEXUS_API_KEY,
     I18NEXUS_API_KEY_TEST: process.env.I18NEXUS_API_KEY_TEST,
   },
+  webpack(webpackConfig) {
+    webpackConfig.resolve.fallback = { fs: false };
+
+    return webpackConfig;
+  },
 };
